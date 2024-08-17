@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="GMTK 2024"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+run/main_scene="res://levels/level_one.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[layer_names]
+
+2d_physics/layer_1="Ground"
 
 [rendering]
 

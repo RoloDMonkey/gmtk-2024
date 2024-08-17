@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c05imfvgp1pgc"]
+
+[ext_resource type="Script" path="res://gnome_tiny.gd" id="1_crw7t"]
+[ext_resource type="Texture2D" uid="uid://djtgftiv4nykf" path="res://assets/gnomes/TinyGnomeBlackWhite.png" id="1_wj0ed"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88k86"]
+radius = 18.0
+height = 70.0
+
+[node name="GnomeTiny" type="CharacterBody2D"]
+script = ExtResource("1_crw7t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.500002, -1.54972e-06)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("1_wj0ed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_88k86")
