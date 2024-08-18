@@ -8,6 +8,8 @@ radius = 18.0
 height = 70.0
 
 [node name="GnomeTiny" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_crw7t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
