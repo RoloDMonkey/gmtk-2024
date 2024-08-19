@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
+const INERTIA = 50.0
 
 # Vertical impulse applied to the character upon bouncing on an item.
 @export var bounce_impulse = 400
@@ -29,12 +30,15 @@ func _physics_process(delta):
 		if collision.get_collider() == null:
 			continue
 
+		var collider = collision.get_collider()
 		# If the collider is with an item.
-		if collision.get_collider().is_in_group("item"):
+		if collider.is_in_group("item"):
 			# we check that we are hitting it from above.
 			if Vector2.UP.dot(collision.get_normal()) > 0.1:
-				# If so, we squash it and bounce.
+				# If so, we bounce.
 				velocity.y = -1 * bounce_impulse
 				break
-				
+			elif collider is RigidBody2D:
+				collider.apply_central_impulse(-collision.get_normal() * INERTIA)
+	
 	move_and_slide()

@@ -18,7 +18,7 @@ tile_map_data = PackedByteArray("AAD//wgACAAJAAAAAAD//wkACAADAAAAAAD//woACAAIAAs
 tile_set = ExtResource("1_seemn")
 
 [node name="MushroomBasic" parent="." instance=ExtResource("3_kt0qy")]
-position = Vector2(395, 626)
+position = Vector2(325, 549)
 
 [node name="MushroomBasic2" parent="." instance=ExtResource("3_kt0qy")]
-position = Vector2(745, 486)
+position = Vector2(605, 409)
