@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://f7dv6b7a2gcs"]
+[gd_scene load_steps=7 format=4 uid="uid://f7dv6b7a2gcs"]
 
 [ext_resource type="Script" path="res://levels/level_one.gd" id="1_8ckgb"]
 [ext_resource type="PackedScene" uid="uid://c05imfvgp1pgc" path="res://gnome_tiny.tscn" id="1_f1hxx"]
 [ext_resource type="TileSet" uid="uid://cd24blr1gdnd" path="res://resources/base_tile_set.tres" id="1_seemn"]
 [ext_resource type="PackedScene" uid="uid://b2rkx88g3rpuj" path="res://mushroom_basic.tscn" id="3_kt0qy"]
 [ext_resource type="PackedScene" uid="uid://b5306yja3dnvo" path="res://exit.tscn" id="4_up8ci"]
+[ext_resource type="PackedScene" uid="uid://bnw00318j3gyo" path="res://win.tscn" id="6_kkrtk"]
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_8ckgb")
@@ -29,5 +30,9 @@ position = Vector2(605, 409)
 
 [node name="Exit" parent="." instance=ExtResource("4_up8ci")]
 position = Vector2(1165, 255)
+
+[node name="Win" parent="." instance=ExtResource("6_kkrtk")]
+z_index = 2
+position = Vector2(402, 122)
 
 [connection signal="exit_level" from="Exit" to="." method="_on_exit_exit_level"]

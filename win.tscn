@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bnw00318j3gyo"]
+
+[node name="Win" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 647.0
+offset_bottom = 367.0
+theme_override_colors/default_color = Color(0.905882, 0.431373, 0.141176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/normal_font_size = 200
+text = "You Win!"
+fit_content = true

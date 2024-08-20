@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c05imfvgp1pgc"]
+[gd_scene load_steps=5 format=3 uid="uid://c05imfvgp1pgc"]
 
 [ext_resource type="Script" path="res://gnome_tiny.gd" id="1_crw7t"]
 [ext_resource type="Texture2D" uid="uid://bvpclm8uo2bc5" path="res://assets/gnomes/TinyGnomePurpleYellow.png" id="2_6vbhl"]
+[ext_resource type="AudioStream" uid="uid://bwn3x4gp5aejm" path="res://assets/jump.wav" id="3_ou1g7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88k86"]
 radius = 18.0
@@ -21,3 +22,7 @@ texture = ExtResource("2_6vbhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_88k86")
+
+[node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ou1g7")
+volume_db = -10.0

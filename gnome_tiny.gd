@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var sound_jump = $SoundJump
 
 const SPEED = 300.0
 const INERTIA = 50.0
@@ -37,6 +38,7 @@ func _physics_process(delta):
 			if Vector2.UP.dot(collision.get_normal()) > 0.1:
 				# If so, we bounce.
 				velocity.y = -1 * bounce_impulse
+				sound_jump.play()
 				break
 			elif collider is RigidBody2D:
 				collider.apply_central_impulse(-collision.get_normal() * INERTIA)
